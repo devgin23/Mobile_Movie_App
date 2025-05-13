@@ -10,7 +10,7 @@ const _layout = () => {
                 title: 'Home',
                 headerShown: false
             }}
-            />
+        />
         <Tabs.Screen
             name='search'
             options={{
