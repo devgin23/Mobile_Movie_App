@@ -18,8 +18,8 @@ const database = new Databases(client);
 export const updateSearchCount = async (query: string, movie: Movie) => {
     try {
         const result = await database.listDocuments(DATABASE_ID, COLLECTION_ID, [
-            Query.equal('searchTerm', query)
-        ])
+            Query.equal('searchTerm', query),
+        ]);
         console.log('here!!!');
         
         console.log(result);
@@ -46,7 +46,7 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
         }
         
     } catch (error) {
-        console.log(error);
+        console.log("Error updating search count:", error);
         throw error;
     }
 
